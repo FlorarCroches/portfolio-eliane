@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portefólio profissional de Eliane dos Santos Silva — análise de sistemas e aplicações de gestão.">
+  <title>Eliane dos Santos Silva | Portefólio</title>
+
+  <style>
+    :root {
+      --navy: #14243a;
+      --blue: #294d70;
+      --gold: #c9a96a;
+      --paper: #f5f6f8;
+      --ink: #263445;
+      --muted: #637083;
+      --white: #fff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(1050px, calc(100% - 36px));
+      margin: auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--navy), #233f5d);
+      color: white;
+      padding: 64px 22px 56px;
+      border-bottom: 5px solid var(--gold);
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .76rem;
+      color: #e0c78f;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      line-height: 1.08;
+      margin: 14px 0;
+    }
+
+    .role {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: #e2e9f0;
+      max-width: 700px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 17px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid #d5bd88;
+      color: white;
+    }
+
+    .btn.primary {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: #1d2c3b;
+    }
+
+    main { padding: 36px 0 60px; }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 22px;
+      margin-bottom: 34px;
+    }
+
+    .panel {
+      background: white;
+      border: 1px solid #e1e5ea;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 8px 24px #14243a0a;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+      margin: 0 0 12px;
+      color: var(--navy);
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+    }
+
+    p { margin: 0 0 12px; }
+
+    .muted { color: var(--muted); }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      background: #edf2f7;
+      color: #29435e;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: .87rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .project {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .project-top {
+      background: linear-gradient(135deg, #203a55, #365f7e);
+      padding: 22px;
+      color: white;
+    }
+
+    .project-top .eyebrow { color: #e4cc97; }
+
+    .project-top h3 {
+      color: white;
+      font-size: 1.45rem;
+      margin: 7px 0;
+    }
+
+    .project-body {
+      padding: 23px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .project-body ul {
+      padding-left: 20px;
+      margin: 4px 0 18px;
+    }
+
+    .project-body li { margin: 5px 0; }
+
+    .project-link {
+      margin-top: auto;
+      display: inline-block;
+      align-self: flex-start;
+      background: var(--navy);
+      color: white;
+      padding: 10px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .note {
+      font-size: .9rem;
+      color: var(--muted);
+      margin-top: 22px;
+    }
+
+    footer {
+      background: var(--navy);
+      color: #dce4ec;
+      padding: 25px 18px;
+      text-align: center;
+      font-size: .9rem;
+    }
+
+    footer a { color: #e4cc97; }
+
+    @media (max-width: 720px) {
+      .intro, .projects { grid-template-columns: 1fr; }
+      header { padding-top: 45px; }
+      .panel { padding: 20px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="eyebrow">Portefólio profissional</div>
+
+      <h1>Eliane dos Santos Silva</h1>
+
+      <p class="role">
+        Analista de Sistemas Sénior · Sistemas de Gestão · Suporte Funcional
+      </p>
+
+      <p style="max-width:760px; margin-top:18px; color:#e2e9f0">
+        Experiência em sistemas de informação, análise de necessidades,
+        melhoria de processos e apoio funcional. Neste portefólio apresento
+        dois projetos próprios de aplicações de gestão.
+      </p>
+
+      <div class="actions">
+        <a class="btn primary" href="#projetos">Ver projetos</a>
+        <a class="btn" href="mailto:eli_es@msn.com">Contactar por e-mail</a>
+        <a class="btn" href="tel:+351915433044">Ligar</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <div class="panel">
+        <h2>Sobre mim</h2>
+
+        <p>
+          Profissional com experiência na utilização e análise de sistemas,
+          acompanhamento de utilizadores e organização de processos.
+          Desenvolvo projetos próprios para resolver necessidades práticas
+          de gestão, com foco na simplicidade, acessibilidade e organização
+          da informação.
+        </p>
+
+        <p class="muted">
+          Área de interesse: análise funcional, suporte a aplicações,
+          sistemas de gestão e melhoria contínua.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h2>Competências e ferramentas</h2>
+
+        <div class="skills">
+          <span class="tag">Análise funcional</span>
+          <span class="tag">Suporte ao utilizador</span>
+          <span class="tag">Documentação de processos</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">Bootstrap</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Firebase</span>
+          <span class="tag">VS Code</span>
+          <span class="tag">GitHub Pages</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <h2 style="margin-bottom:18px">Projetos próprios</h2>
+
+      <div class="projects">
+        <article class="panel project">
+          <div class="project-top">
+            <div class="eyebrow">Projeto 01 · Gestão de negócio</div>
+            <h3>EBS — Eliane Beauty Systems</h3>
+            <p style="margin:0; color:#e2e9f0">
+              Aplicação web de gestão para negócio de beleza.
+            </p>
+          </div>
+
+          <div class="project-body">
+            <p>
+              Projeto de aplicação orientado à organização das rotinas e
+              da informação de um negócio de beleza, reunindo diferentes
+              áreas num só sistema.
+            </p>
+
+            <ul>
+              <li>Agenda e marcação de serviços</li>
+              <li>Gestão de clientes, serviços e colaboradores</li>
+              <li>Áreas financeira, stock e relatórios</li>
+              <li>Configurações da aplicação</li>
+            </ul>
+
+            <div class="skills" style="margin:0 0 18px">
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Firebase</span>
+            </div>
+
+            <a class="project-link"
+               href="https://eli04091977pt-ux.github.io/EBS/pages/agenda.html"
+               target="_blank" rel="noopener noreferrer">
+              Abrir projeto EBS ↗
+            </a>
+          </div>
+        </article>
+
+        <article class="panel project">
+          <div class="project-top">
+            <div class="eyebrow">Projeto 02 · Agenda e operações</div>
+            <h3>Brilho Certo</h3>
+            <p style="margin:0; color:#e2e9f0">
+              Sistema de gestão para negócio de lavagem automóvel.
+            </p>
+          </div>
+
+          <div class="project-body">
+            <p>
+              Aplicação web concebida para apoiar a gestão diária do negócio,
+              centralizando marcações e informação operacional.
+            </p>
+
+            <ul>
+              <li>Agenda de serviços e dados dos clientes</li>
+              <li>Registo de serviços e pagamentos</li>
+              <li>Controlo de despesas e relatórios</li>
+              <li>Módulo dedicado a operações IMO</li>
+            </ul>
+
+            <div class="skills" style="margin:0 0 18px">
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">GitHub Pages</span>
+            </div>
+
+            <a class="project-link"
+               href="https://brilhocerto.github.io/sistema-lavagem-carros-teste/agendamentos.html"
+               target="_blank" rel="noopener noreferrer">
+              Abrir demonstração Brilho Certo ↗
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <p class="note">
+        Estes são projetos próprios apresentados para demonstrar experiência
+        prática na conceção de aplicações de gestão. As tecnologias indicadas
+        devem refletir exatamente as utilizadas em cada projeto.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div>Eliane dos Santos Silva · Braga, Portugal</div>
+    <div>
+      <a href="mailto:eli_es@msn.com">eli_es@msn.com</a>
+      ·
+      <a href="tel:+351915433044">+351 915 433 044</a>
+    </div>
+  </footer>
+</body>
+</html>
