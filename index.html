@@ -2,369 +2,558 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portefólio profissional de Eliane dos Santos Silva — análise de sistemas e aplicações de gestão.">
-  <title>Eliane dos Santos Silva | Portefólio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Eliane | Soluções Digitais — desenvolvimento web, Landing Pages e sistemas de gestão.">
+<meta name="theme-color" content="#111c2b">
+<title>Eliane | Soluções Digitais</title>
 
-  <style>
-    :root {
-      --navy: #14243a;
-      --blue: #294d70;
-      --gold: #c9a96a;
-      --paper: #f5f6f8;
-      --ink: #263445;
-      --muted: #637083;
-      --white: #fff;
-    }
+<style>
+:root {
+  --navy: #111c2b;
+  --blue: #42658a;
+  --pale: #b8cce3;
+  --paper: #f4f6f8;
+  --ink: #243244;
+  --muted: #657386;
+  --white: #fff;
+  --line: #e1e7ee;
+}
 
-    * { box-sizing: border-box; }
+* { box-sizing: border-box; }
 
-    html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; }
 
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      color: var(--ink);
-      background: var(--paper);
-      line-height: 1.6;
-    }
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+}
 
-    .container {
-      width: min(1050px, calc(100% - 36px));
-      margin: auto;
-    }
+a { color: inherit; }
 
-    header {
-      background: linear-gradient(135deg, var(--navy), #233f5d);
-      color: white;
-      padding: 64px 22px 56px;
-      border-bottom: 5px solid var(--gold);
-    }
+.wrap {
+  width: min(1120px, calc(100% - 40px));
+  margin: auto;
+}
 
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: .16em;
-      font-size: .76rem;
-      color: #e0c78f;
-      font-weight: 700;
-    }
+.topbar {
+  background: #0c1521;
+  color: #dbe6f2;
+  padding: 13px 0;
+  font-size: .9rem;
+}
 
-    h1 {
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
-      line-height: 1.08;
-      margin: 14px 0;
-    }
+.topbar .wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
 
-    .role {
-      font-size: clamp(1rem, 2vw, 1.25rem);
-      color: #e2e9f0;
-      max-width: 700px;
-    }
+nav {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
 
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 26px;
-    }
+nav a {
+  text-decoration: none;
+  color: #dbe6f2;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 11px 17px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 700;
-      border: 1px solid #d5bd88;
-      color: white;
-    }
+nav a:hover { color: white; }
 
-    .btn.primary {
-      background: var(--gold);
-      border-color: var(--gold);
-      color: #1d2c3b;
-    }
+.hero {
+  background:
+    radial-gradient(circle at 85% 15%, #365879 0, transparent 32%),
+    linear-gradient(135deg, #111c2b, #1d3550);
+  color: white;
+  padding: 88px 0 82px;
+}
 
-    main { padding: 36px 0 60px; }
+.eyebrow {
+  color: var(--pale);
+  text-transform: uppercase;
+  letter-spacing: .17em;
+  font-size: .76rem;
+  font-weight: 800;
+}
 
-    .intro {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      gap: 22px;
-      margin-bottom: 34px;
-    }
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4.7rem);
+  line-height: 1.05;
+  margin: 15px 0 20px;
+  max-width: 850px;
+  letter-spacing: -.04em;
+}
 
-    .panel {
-      background: white;
-      border: 1px solid #e1e5ea;
-      border-radius: 14px;
-      padding: 24px;
-      box-shadow: 0 8px 24px #14243a0a;
-    }
+.hero p {
+  font-size: 1.13rem;
+  color: #d8e3ef;
+  max-width: 720px;
+  margin: 0;
+}
 
-    h2 {
-      font-size: 1.45rem;
-      margin: 0 0 12px;
-      color: var(--navy);
-    }
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
 
-    h3 {
-      margin: 0 0 8px;
-      color: var(--navy);
-    }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 19px;
+  border-radius: 9px;
+  text-decoration: none;
+  font-weight: 750;
+  border: 1px solid #91a9c2;
+  color: white;
+  transition: .2s;
+}
 
-    p { margin: 0 0 12px; }
+.btn.primary {
+  background: var(--pale);
+  color: var(--navy);
+  border-color: var(--pale);
+}
 
-    .muted { color: var(--muted); }
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 14px;
-    }
+section { padding: 68px 0; }
 
-    .tag {
-      background: #edf2f7;
-      color: #29435e;
-      border-radius: 999px;
-      padding: 6px 10px;
-      font-size: .87rem;
-    }
+.section-head {
+  max-width: 720px;
+  margin-bottom: 28px;
+}
 
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-    }
+.section-head h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  line-height: 1.15;
+  color: var(--navy);
+  margin: 8px 0 12px;
+}
 
-    .project {
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
+.section-head p { color: var(--muted); }
 
-    .project-top {
-      background: linear-gradient(135deg, #203a55, #365f7e);
-      padding: 22px;
-      color: white;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
 
-    .project-top .eyebrow { color: #e4cc97; }
+.card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 10px 30px #15263a08;
+}
 
-    .project-top h3 {
-      color: white;
-      font-size: 1.45rem;
-      margin: 7px 0;
-    }
+.icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #eaf0f6;
+  color: var(--blue);
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+  margin-bottom: 17px;
+}
 
-    .project-body {
-      padding: 23px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
+h3 {
+  color: var(--navy);
+  margin: 0 0 9px;
+  font-size: 1.17rem;
+}
 
-    .project-body ul {
-      padding-left: 20px;
-      margin: 4px 0 18px;
-    }
+.card p { color: var(--muted); }
 
-    .project-body li { margin: 5px 0; }
+.about {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 22px;
+}
 
-    .project-link {
-      margin-top: auto;
-      display: inline-block;
-      align-self: flex-start;
-      background: var(--navy);
-      color: white;
-      padding: 10px 14px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 700;
-      overflow-wrap: anywhere;
-    }
+.about .card { padding: 30px; }
 
-    .note {
-      font-size: .9rem;
-      color: var(--muted);
-      margin-top: 22px;
-    }
+.chips {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
 
-    footer {
-      background: var(--navy);
-      color: #dce4ec;
-      padding: 25px 18px;
-      text-align: center;
-      font-size: .9rem;
-    }
+.chip {
+  background: #edf2f7;
+  color: #29435e;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: .88rem;
+}
 
-    footer a { color: #e4cc97; }
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
 
-    @media (max-width: 720px) {
-      .intro, .projects { grid-template-columns: 1fr; }
-      header { padding-top: 45px; }
-      .panel { padding: 20px; }
-    }
-  </style>
+.project {
+  padding: 0;
+  overflow: hidden;
+}
+
+.project-head {
+  padding: 26px;
+  background: linear-gradient(135deg, #1a3048, #42658a);
+  color: white;
+}
+
+.project-head .eyebrow { color: #d4e2f1; }
+.project-head h3 { color: white; font-size: 1.45rem; margin: 8px 0; }
+
+.project-body { padding: 25px; }
+
+.project-body ul {
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.project-body li { margin: 5px 0; }
+
+.text-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #294d70;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.text-link:hover { text-decoration: underline; }
+
+.cta { background: #e9eff5; }
+
+.cta-box {
+  background: linear-gradient(135deg, #111c2b, #294d70);
+  color: white;
+  padding: 38px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  align-items: center;
+}
+
+.cta-box h2 {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  line-height: 1.15;
+  margin: 0 0 10px;
+}
+
+.cta-box p {
+  color: #d8e3ef;
+  max-width: 620px;
+}
+
+footer {
+  background: #0c1521;
+  color: #c8d4e0;
+  padding: 28px 0;
+  text-align: center;
+  font-size: .92rem;
+}
+
+footer a { color: var(--pale); }
+
+@media(max-width:760px) {
+  .topbar .wrap {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .grid,
+  .about,
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .hero { padding: 66px 0; }
+
+  .cta-box {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  section { padding: 52px 0; }
+}
+</style>
 </head>
 
 <body>
-  <header>
-    <div class="container">
-      <div class="eyebrow">Portefólio profissional</div>
 
-      <h1>Eliane dos Santos Silva</h1>
+<div class="topbar">
+  <div class="wrap">
+    <strong>ELIANE | SOLUÇÕES DIGITAIS</strong>
+    <nav aria-label="Navegação principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</div>
 
-      <p class="role">
-        Analista de Sistemas Sénior · Sistemas de Gestão · Suporte Funcional
-      </p>
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Análise de sistemas · Desenvolvimento web</div>
 
-      <p style="max-width:760px; margin-top:18px; color:#e2e9f0">
-        Experiência em sistemas de informação, análise de necessidades,
-        melhoria de processos e apoio funcional. Neste portefólio apresento
-        dois projetos próprios de aplicações de gestão.
-      </p>
+    <h1>Transformo ideias em soluções digitais.</h1>
 
-      <div class="actions">
-        <a class="btn primary" href="#projetos">Ver projetos</a>
-        <a class="btn" href="mailto:eli_es@msn.com">Contactar por e-mail</a>
-        <a class="btn" href="tel:+351915433044">Ligar</a>
-      </div>
+    <p>
+      Desenvolvimento de sites, Landing Pages e sistemas
+      de gestão para pessoas, profissionais independentes
+      e empresas. Tecnologia pensada para simplificar
+      processos e apoiar negócios.
+    </p>
+
+    <div class="actions">
+      <a class="btn primary" href="#projetos">Conhecer projetos</a>
+      <a class="btn" href="#contacto">Falar sobre a tua ideia</a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main class="container">
-    <section class="intro">
-      <div class="panel">
-        <h2>Sobre mim</h2>
+<main>
 
+<section id="servicos">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">O que posso desenvolver</div>
+      <h2>Soluções digitais para diferentes necessidades.</h2>
+      <p>
+        Desde uma presença online profissional até ferramentas
+        que ajudam a organizar o dia a dia de um negócio.
+      </p>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <div class="icon">▣</div>
+        <h3>Sites e Landing Pages</h3>
         <p>
-          Profissional com experiência na utilização e análise de sistemas,
-          acompanhamento de utilizadores e organização de processos.
-          Desenvolvo projetos próprios para resolver necessidades práticas
-          de gestão, com foco na simplicidade, acessibilidade e organização
-          da informação.
+          Páginas de apresentação, divulgação de serviços,
+          produtos e negócios, adaptadas a telemóveis
+          e computadores.
         </p>
+      </article>
 
-        <p class="muted">
-          Área de interesse: análise funcional, suporte a aplicações,
-          sistemas de gestão e melhoria contínua.
+      <article class="card">
+        <div class="icon">⚙</div>
+        <h3>Sistemas de gestão</h3>
+        <p>
+          Aplicações para organizar agendamentos, clientes,
+          serviços, despesas e informação operacional.
         </p>
-      </div>
+      </article>
 
-      <div class="panel">
-        <h2>Competências e ferramentas</h2>
-
-        <div class="skills">
-          <span class="tag">Análise funcional</span>
-          <span class="tag">Suporte ao utilizador</span>
-          <span class="tag">Documentação de processos</span>
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">Bootstrap</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">Firebase</span>
-          <span class="tag">VS Code</span>
-          <span class="tag">GitHub Pages</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="projetos">
-      <h2 style="margin-bottom:18px">Projetos próprios</h2>
-
-      <div class="projects">
-        <article class="panel project">
-          <div class="project-top">
-            <div class="eyebrow">Projeto 01 · Gestão de negócio</div>
-            <h3>EBS — Eliane Beauty Systems</h3>
-            <p style="margin:0; color:#e2e9f0">
-              Aplicação web de gestão para negócio de beleza.
-            </p>
-          </div>
-
-          <div class="project-body">
-            <p>
-              Projeto de aplicação orientado à organização das rotinas e
-              da informação de um negócio de beleza, reunindo diferentes
-              áreas num só sistema.
-            </p>
-
-            <ul>
-              <li>Agenda e marcação de serviços</li>
-              <li>Gestão de clientes, serviços e colaboradores</li>
-              <li>Áreas financeira, stock e relatórios</li>
-              <li>Configurações da aplicação</li>
-            </ul>
-
-            <div class="skills" style="margin:0 0 18px">
-              <span class="tag">HTML/CSS</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">Firebase</span>
-            </div>
-
-            <a class="project-link"
-               href="https://eli04091977pt-ux.github.io/EBS/pages/agenda.html"
-               target="_blank" rel="noopener noreferrer">
-              Abrir projeto EBS ↗
-            </a>
-          </div>
-        </article>
-
-        <article class="panel project">
-          <div class="project-top">
-            <div class="eyebrow">Projeto 02 · Agenda e operações</div>
-            <h3>Brilho Certo</h3>
-            <p style="margin:0; color:#e2e9f0">
-              Sistema de gestão para negócio de lavagem automóvel.
-            </p>
-          </div>
-
-          <div class="project-body">
-            <p>
-              Aplicação web concebida para apoiar a gestão diária do negócio,
-              centralizando marcações e informação operacional.
-            </p>
-
-            <ul>
-              <li>Agenda de serviços e dados dos clientes</li>
-              <li>Registo de serviços e pagamentos</li>
-              <li>Controlo de despesas e relatórios</li>
-              <li>Módulo dedicado a operações IMO</li>
-            </ul>
-
-            <div class="skills" style="margin:0 0 18px">
-              <span class="tag">HTML/CSS</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">Firebase</span>
-              <span class="tag">GitHub Pages</span>
-            </div>
-
-            <a class="project-link"
-               href="https://brilhocerto.github.io/sistema-lavagem-carros-teste/agendamentos.html"
-               target="_blank" rel="noopener noreferrer">
-              Abrir demonstração Brilho Certo ↗
-            </a>
-          </div>
-        </article>
-      </div>
-
-      <p class="note">
-        Estes são projetos próprios apresentados para demonstrar experiência
-        prática na conceção de aplicações de gestão. As tecnologias indicadas
-        devem refletir exatamente as utilizadas em cada projeto.
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <div>Eliane dos Santos Silva · Braga, Portugal</div>
-    <div>
-      <a href="mailto:eli_es@msn.com">eli_es@msn.com</a>
-      ·
-      <a href="tel:+351915433044">+351 915 433 044</a>
+      <article class="card">
+        <div class="icon">⌘</div>
+        <h3>Análise e melhoria</h3>
+        <p>
+          Levantamento de necessidades, análise funcional
+          e apoio na melhoria de processos e ferramentas digitais.
+        </p>
+      </article>
     </div>
-  </footer>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap about">
+
+    <article class="card">
+      <div class="eyebrow">Sobre mim</div>
+      <h2>Olá, sou a Eliane.</h2>
+
+      <p>
+        Sou Analista de Sistemas e tenho interesse no
+        desenvolvimento de soluções digitais que respondam
+        a necessidades reais. Gosto de compreender os desafios
+        de cada negócio e transformar ideias em ferramentas
+        simples, funcionais e organizadas.
+      </p>
+
+      <p>
+        Este portefólio reúne projetos próprios e demonstra
+        a minha experiência prática na conceção de aplicações
+        de gestão e desenvolvimento web.
+      </p>
+    </article>
+
+    <aside class="card">
+      <h3>Competências e ferramentas</h3>
+      <p>Tecnologias e áreas de trabalho:</p>
+
+      <div class="chips">
+        <span class="chip">Análise funcional</span>
+        <span class="chip">HTML</span>
+        <span class="chip">CSS</span>
+        <span class="chip">Bootstrap</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">Firebase</span>
+        <span class="chip">VS Code</span>
+        <span class="chip">GitHub Pages</span>
+        <span class="chip">Suporte ao utilizador</span>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<section id="projetos">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">Trabalho em destaque</div>
+      <h2>Projetos desenvolvidos.</h2>
+      <p>
+        Exemplos práticos de como a tecnologia pode apoiar
+        a organização e a gestão de diferentes atividades.
+      </p>
+    </div>
+
+    <div class="projects">
+
+      <article class="card project">
+        <div class="project-head">
+          <div class="eyebrow">Projeto 01 · Gestão de negócio</div>
+          <h3>EBS — Eliane Beauty Systems</h3>
+          <p>Aplicação web de gestão para negócio de beleza.</p>
+        </div>
+
+        <div class="project-body">
+          <p>
+            Projeto orientado à organização das rotinas
+            e da informação de um negócio de beleza.
+          </p>
+
+          <ul>
+            <li>Agenda e marcação de serviços</li>
+            <li>Gestão de clientes, serviços e colaboradores</li>
+            <li>Áreas financeira, stock e relatórios</li>
+            <li>Configurações da aplicação</li>
+          </ul>
+
+          <div class="chips">
+            <span class="chip">HTML/CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Firebase</span>
+          </div>
+
+          <a class="text-link"
+             href="https://eli04091977pt-ux.github.io/EBS/pages/agenda.html"
+             target="_blank" rel="noopener noreferrer">
+            Explorar projeto EBS ↗
+          </a>
+        </div>
+      </article>
+
+      <article class="card project">
+        <div class="project-head">
+          <div class="eyebrow">Projeto 02 · Agenda e operações</div>
+          <h3>Brilho Certo</h3>
+          <p>Sistema de gestão para negócio de lavagem automóvel.</p>
+        </div>
+
+        <div class="project-body">
+          <p>
+            Aplicação web concebida para apoiar a gestão diária,
+            centralizando marcações e informação operacional.
+          </p>
+
+          <ul>
+            <li>Agenda de serviços e dados dos clientes</li>
+            <li>Registo de serviços e pagamentos</li>
+            <li>Controlo de despesas e relatórios</li>
+            <li>Módulo dedicado a operações IMO</li>
+          </ul>
+
+          <div class="chips">
+            <span class="chip">HTML/CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Firebase</span>
+            <span class="chip">GitHub Pages</span>
+          </div>
+
+          <a class="text-link"
+             href="https://brilhocerto.github.io/sistema-lavagem-carros-teste/agendamentos.html"
+             target="_blank" rel="noopener noreferrer">
+            Explorar demonstração Brilho Certo ↗
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+    <p style="color:#657386;font-size:.9rem;margin-top:18px">
+      Os projetos apresentados são demonstrações de trabalho próprio.
+      As funcionalidades e tecnologias devem corresponder às versões
+      efetivamente disponíveis em cada demonstração.
+    </p>
+
+  </div>
+</section>
+
+<section class="cta" id="contacto">
+  <div class="wrap">
+    <div class="cta-box">
+
+      <div>
+        <div class="eyebrow">Vamos conversar?</div>
+        <h2>Tens uma ideia para desenvolver?</h2>
+        <p>
+          Conta-me o que precisas. Podemos conversar sobre
+          uma página para o teu negócio ou uma solução digital
+          adaptada aos teus processos.
+        </p>
+      </div>
+
+      <a class="btn primary"
+         href="https://wa.me/351915433044?text=Ol%C3%A1%2C%20Eliane!%20Gostaria%20de%20saber%20mais%20sobre%20as%20tuas%20solu%C3%A7%C3%B5es%20digitais."
+         target="_blank" rel="noopener noreferrer">
+        Falar pelo WhatsApp
+      </a>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Eliane | Soluções Digitais · Portugal<br>
+
+    <a href="mailto:eli_es@msn.com">eli_es@msn.com</a>
+    ·
+    <a href="tel:+351915433044">+351 915 433 044</a>
+    ·
+    <a href="https://wa.me/351915433044"
+       target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    ·
+    <a href="https://github.com/FlorarCroches/portfolio-eliane"
+       target="_blank" rel="noopener noreferrer">GitHub</a>
+  </div>
+</footer>
+
 </body>
 </html>
