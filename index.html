@@ -201,44 +201,102 @@ h3 {
   font-size: .88rem;
 }
 
+/* PROJETOS */
+
 .projects {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
+  align-items: stretch;
 }
 
 .project {
   padding: 0;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: .25s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px #15263a12;
 }
 
 .project-head {
   padding: 26px;
   background: linear-gradient(135deg, #1a3048, #42658a);
   color: white;
+  min-height: 170px;
 }
 
 .project-head .eyebrow { color: #d4e2f1; }
-.project-head h3 { color: white; font-size: 1.45rem; margin: 8px 0; }
 
-.project-body { padding: 25px; }
+.project-head h3 {
+  color: white;
+  font-size: 1.35rem;
+  margin: 8px 0;
+}
+
+.project-head p {
+  color: #e1eaf3;
+  font-size: .94rem;
+  margin: 0;
+}
+
+.project-body {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-body p { font-size: .94rem; }
 
 .project-body ul {
   padding-left: 20px;
   color: var(--muted);
+  font-size: .9rem;
 }
 
 .project-body li { margin: 5px 0; }
 
+.project-body .chips {
+  margin-top: auto;
+  padding-top: 15px;
+}
+
+.project-body .chip {
+  font-size: .77rem;
+}
+
 .text-link {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 22px;
   color: #294d70;
   font-weight: 800;
   text-decoration: none;
 }
 
 .text-link:hover { text-decoration: underline; }
+
+/* DESTAQUE DO PROJETO DE BELEZA */
+
+.lash-project .project-head {
+  background: linear-gradient(135deg, #514137, #ad895d);
+}
+
+.lash-project .project-head .eyebrow {
+  color: #f5e6d2;
+}
+
+.lash-project .project-head p {
+  color: #fff3e6;
+}
+
+.lash-project .text-link {
+  color: #8b6844;
+}
 
 .cta { background: #e9eff5; }
 
@@ -273,6 +331,12 @@ footer {
 }
 
 footer a { color: var(--pale); }
+
+@media(max-width:950px) {
+  .projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 
 @media(max-width:760px) {
   .topbar .wrap {
@@ -433,6 +497,7 @@ footer a { color: var(--pale); }
 
     <div class="projects">
 
+      <!-- PROJETO 01: EBS -->
       <article class="card project">
         <div class="project-head">
           <div class="eyebrow">Projeto 01 · Gestão de negócio</div>
@@ -467,6 +532,7 @@ footer a { color: var(--pale); }
         </div>
       </article>
 
+      <!-- PROJETO 02: BRILHO CERTO -->
       <article class="card project">
         <div class="project-head">
           <div class="eyebrow">Projeto 02 · Agenda e operações</div>
@@ -502,12 +568,51 @@ footer a { color: var(--pale); }
         </div>
       </article>
 
+      <!-- PROJETO 03: ELIANE LASH OFICIAL -->
+      <article class="card project lash-project">
+        <div class="project-head">
+          <div class="eyebrow">Projeto 03 · Desenvolvimento web</div>
+          <h3>Eliane Lash Oficial</h3>
+          <p>Landing Page para apresentação de serviços de beleza.</p>
+        </div>
+
+        <div class="project-body">
+          <p>
+            Página web criada para fortalecer a presença digital
+            de uma marca de beleza, apresentar serviços e facilitar
+            o contacto e as marcações.
+          </p>
+
+          <ul>
+            <li>Apresentação da marca e dos serviços</li>
+            <li>Extensão de pestanas e Lash Lifting</li>
+            <li>Galeria visual e perguntas frequentes</li>
+            <li>Contacto direto pelo WhatsApp e Instagram</li>
+            <li>Design adaptado a telemóveis e computadores</li>
+          </ul>
+
+          <div class="chips">
+            <span class="chip">HTML5</span>
+            <span class="chip">CSS3</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Design responsivo</span>
+            <span class="chip">GitHub Pages</span>
+          </div>
+
+          <a class="text-link"
+             href="https://florarcroches.github.io/eliane-lash-oficial/"
+             target="_blank" rel="noopener noreferrer">
+            Visitar Landing Page ↗
+          </a>
+        </div>
+      </article>
+
     </div>
 
     <p style="color:#657386;font-size:.9rem;margin-top:18px">
       Os projetos apresentados são demonstrações de trabalho próprio.
-      As funcionalidades e tecnologias devem corresponder às versões
-      efetivamente disponíveis em cada demonstração.
+      As funcionalidades e tecnologias descritas correspondem
+      às características dos respetivos projetos.
     </p>
 
   </div>
